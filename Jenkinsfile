@@ -1,9 +1,13 @@
 pipeline {
     agent any
+    libraries {
+  lib('jenkins-shared-library@master')
+}
+
     stages {
         stage('demo') {
            steps {
-              echo 'Hello World'
+              hello 'sashi'
             }
         }
     }

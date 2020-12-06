@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                notifyStarted()
+                notifystarted()
                 sh 'mvn clean install'
                 // notifySuccessful()
                 

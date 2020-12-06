@@ -1,7 +1,7 @@
 pipeline {
     agent any
  libraries {
-  lib('jenkins-shared-library@master') import static org.foo.Utilities.*
+  lib('jenkins-shared-library@master') 
 }
    
     stages {

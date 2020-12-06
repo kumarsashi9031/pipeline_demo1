@@ -7,8 +7,10 @@ pipeline {
     stages {
         stage('Git-Checkout') { 
             steps {
-                echo "checking out from git repo";
-                git 'https://github.com/javaparser/javaparser-maven-sample.git'
+                def z = new org.foo.gitcheckout()
+                 z.checkOutFrom(repo)
+                // echo "checking out from git repo";
+                // git 'https://github.com/javaparser/javaparser-maven-sample.git'
                 
                 // 
             }
@@ -17,7 +19,7 @@ pipeline {
             steps {
                 notifystarted()
                 sh 'mvn clean install'
-                notifySuccessful()
+                // notifySuccessful()
                 
                 
           }

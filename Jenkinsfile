@@ -1,8 +1,9 @@
+@Library('jenkins-shared-library@master') import static org.foo.Utilities.*
 pipeline {
     agent any
- libraries {
-  lib('jenkins-shared-library@master') 
-}
+//  libraries {
+//   lib('jenkins-shared-library@master') 
+// }
    
     stages {
         stage('Git-Checkout') { 

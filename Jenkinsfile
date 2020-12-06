@@ -1,6 +1,9 @@
-agent {
-        label 'slave1'
-    }
+pipeline {
+    agent any
+ libraries {
+  lib('jenkins-shared-library@master')
+}
+   
     stages {
         stage('Git-Checkout') { 
             steps {
@@ -14,7 +17,7 @@ agent {
             steps {
                 notifyStarted()
                 sh 'mvn clean install'
-                notifySuccessful()
+                // notifySuccessful()
                 
                 // 
           }

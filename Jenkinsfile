@@ -17,9 +17,9 @@ pipeline {
             steps {
                 notifystarted()
                 sh 'mvn clean install'
-                // notifySuccessful()
+                notifySuccessful()
                 
-                // 
+                
           }
         }
         

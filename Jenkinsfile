@@ -7,8 +7,8 @@ pipeline {
     stages {
         stage('Git-Checkout') { 
             steps {
-                def z = new org.foo.gitcheckout()
-                 z.checkOutFrom(repo)
+            def z = new org.foo.gitcheckout()
+            z.checkOutFrom(repo)
                 // echo "checking out from git repo";
                 // git 'https://github.com/javaparser/javaparser-maven-sample.git'
                 

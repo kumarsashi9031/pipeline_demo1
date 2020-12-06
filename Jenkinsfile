@@ -1,4 +1,4 @@
-@Library('jenkins-shared-library@master') 
+@Library('jenkins-shared-library@master') import static org.foo.Utilities.*
 pipeline {
     agent any
 //  libraries {
@@ -18,11 +18,11 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                import static org.foo.Utilities.*
+                
                 notifystarted()
-                mvn this, 'clean install'
+                // mvn this, 'clean install'
 
-                // sh 'mvn clean install'
+                sh 'mvn clean install'
                 notifySuccessful()
                 
                 

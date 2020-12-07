@@ -1,14 +1,14 @@
 @Library('jenkins-shared-library@master') import static org.foo.Utilities.*
 node {
-    agent any
-//  libraries {
-//   lib('jenkins-shared-library@master') 
-// }
+    // agent any
+ //  libraries {
+ //   lib('jenkins-shared-library@master') 
+ // }
    
-        stage('Git-Checkout') { 
-            def z = new org.foo.gitcheckout()
-              z.checkOutFrom(repo)
-                echo "checking out from git repo";
+    stage('Git-Checkout') { 
+        def z = new org.foo.gitcheckout()
+        z.checkOutFrom(repo)
+        echo "checking out from git repo";
                 // git 'https://github.com/javaparser/javaparser-maven-sample.git'
                 
                 // 
@@ -33,10 +33,10 @@ node {
         // }
         
     
-    post('archive the artifact') {
-        success {
-            archiveArtifacts artifacts: 'target/**.jar'
+    // post('archive the artifact') {
+    //     success {
+    //         archiveArtifacts artifacts: 'target/**.jar'
             
-        } 
+    //     } 
         
 }

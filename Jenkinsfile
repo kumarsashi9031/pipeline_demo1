@@ -5,8 +5,8 @@ node {
         // def z = new org.foo.gitcheckout()
         //  sh 'git https://github.com/javaparser/javaparser-maven-sample.git'
         // z.checkOutFrom(repo)
-        // echo "checking out from git repo";
-        //         git 'https://github.com/javaparser/javaparser-maven-sample.git'
+        echo "checking out from git repo";
+                git 'https://github.com/javaparser/javaparser-maven-sample.git'
                 
                 // 
         }

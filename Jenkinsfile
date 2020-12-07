@@ -1,16 +1,10 @@
 @Library('jenkins-shared-library@master') import static org.foo.Utilities.*
-// def utils = new Utilities(this)
 node {
-    // agent any
- //  libraries {
- //   lib('jenkins-shared-library@master') 
- // }
-   
-    stage('Git-Checkout') { 
-        // def z = new org.foo.gitcheckout()
-        // z.checkOutFrom(repo)
-        echo "checking out from git repo";
-                git 'https://github.com/javaparser/javaparser-maven-sample.git'
+  stage('Git-Checkout') { 
+        def z = new org.foo.gitcheckout()
+        z.checkOutFrom(repo)
+        // echo "checking out from git repo";
+        //         git 'https://github.com/javaparser/javaparser-maven-sample.git'
                 
                 // 
         }

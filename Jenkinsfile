@@ -1,5 +1,5 @@
 @Library('jenkins-shared-library@master') import static org.foo.Utilities.*
-def utils = new Utilities(this)
+// def utils = new Utilities(this)
 node {
     // agent any
  //  libraries {
@@ -17,9 +17,9 @@ node {
         stage('Build') { 
                 
                 notifystarted()
-                utils.mvn 'clean install'
+                // utils.mvn 'clean install'
 
-                // sh 'mvn clean install'
+                sh 'mvn clean install'
                 notifySuccessful()
                 
                 

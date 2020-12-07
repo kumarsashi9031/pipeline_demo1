@@ -1,5 +1,5 @@
 @Library('jenkins-shared-library@master') import static org.foo.Utilities.*
-
+def utils = new Utilities(this)
 node {
     // agent any
  //  libraries {
@@ -41,4 +41,3 @@ node {
     //     } 
         
 }
-def utils = new Utilities(this)

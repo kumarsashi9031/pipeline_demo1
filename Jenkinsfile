@@ -1,8 +1,10 @@
 @Library('jenkins-shared-library@master') import static org.foo.Utilities.*
+import static org.foo.gitcheckout.*
 node {
   stage('Git-Checkout') { 
-        def z = new org.foo.gitcheckout()
-        z.checkOutFrom(repo)
+        // def z = new org.foo.gitcheckout()
+         sh 'git https://github.com/javaparser/javaparser-maven-sample.git'
+        // z.checkOutFrom(repo)
         // echo "checking out from git repo";
         //         git 'https://github.com/javaparser/javaparser-maven-sample.git'
                 

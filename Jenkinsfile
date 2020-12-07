@@ -1,32 +1,27 @@
 @Library('jenkins-shared-library@master') import static org.foo.Utilities.*
-pipeline {
+node {
     agent any
 //  libraries {
 //   lib('jenkins-shared-library@master') 
 // }
    
-    stages {
         stage('Git-Checkout') { 
-            steps {
-            // def z = new org.foo.gitcheckout()
-            //   z.checkOutFrom(repo)
+            def z = new org.foo.gitcheckout()
+              z.checkOutFrom(repo)
                 echo "checking out from git repo";
-                git 'https://github.com/javaparser/javaparser-maven-sample.git'
+                // git 'https://github.com/javaparser/javaparser-maven-sample.git'
                 
                 // 
-            }
         }
         stage('Build') { 
-            steps {
                 
                 notifystarted()
-                // mvn this, 'clean install'
+                mvn this, 'clean install'
 
-                sh 'mvn clean install'
+                // sh 'mvn clean install'
                 notifySuccessful()
                 
                 
-          }
         }
         
         // stage('deployment of an agent'){
@@ -37,12 +32,11 @@ pipeline {
         //     }   
         // }
         
-    } 
+    
     post('archive the artifact') {
         success {
             archiveArtifacts artifacts: 'target/**.jar'
             
         } 
-    }
         
 }

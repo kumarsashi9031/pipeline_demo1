@@ -1,4 +1,4 @@
-Library('jenkins-shared-library@master') import static org.foo.Utilities.*
+@Library('jenkins-shared-library@master') import static org.foo.Utilities.*
 
 node {
     // agent any

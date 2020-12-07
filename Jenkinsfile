@@ -33,9 +33,7 @@ node {
         
     
     stage('archive the artifact') {
-        success {
             archiveArtifacts artifacts: 'target/**.jar'
-            
-        } 
+             } 
         
 }

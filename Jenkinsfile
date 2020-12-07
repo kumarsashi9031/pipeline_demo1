@@ -25,13 +25,11 @@ node {
                 
         }
         
-        // stage('deployment of an agent'){
-        //     steps {
-        //         sshagent(['4a2572d4-8cde-4d54-b399-e767fd7c4413']) {
-        //            sh "scp target/**.jar ubuntu@ec2-52-90-87-94.compute-1.amazonaws.com:/home/ubuntu/slave3"
-        //         }   
-        //     }   
-        // }
+        stage('deployment of an agent'){
+                sshagent(['4a2572d4-8cde-4d54-b399-e767fd7c4413']) {
+                   sh "scp target/**.jar ubuntu@ec2-52-90-87-94.compute-1.amazonaws.com:/home/ubuntu/slave3"
+                }    
+        }
         
     
     // post('archive the artifact') {

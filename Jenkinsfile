@@ -6,7 +6,7 @@ node {
         //  sh 'git https://github.com/javaparser/javaparser-maven-sample.git'
         // z.checkOutFrom(repo)
         echo "checking out from git repo";
-                git this, 'https://github.com/javaparser/javaparser-maven-sample.git'
+                git 'https://github.com/javaparser/javaparser-maven-sample.git'
                 
                 // 
         }

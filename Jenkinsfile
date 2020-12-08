@@ -1,5 +1,5 @@
 @Library('jenkins-shared-library@master') import static org.foo.Utilities.*
-import static org.foo.gitcheckout.*
+import static org.foo.Gitcheckout.*
 node {
   stage('Git-Checkout') { 
         // def z = new org.foo.gitcheckout()

@@ -2,20 +2,14 @@
 import static org.foo.Gitcheckout.*
 node {
   stage('Git-Checkout') { 
-        // def z = new org.foo.gitcheckout()
-        //  sh 'git https://github.com/javaparser/javaparser-maven-sample.git'
-        // z.checkOutFrom(repo)
         echo "checking out from git repo";
                 git this,'https://github.com/javaparser/javaparser-maven-sample.git'
                 
-                // 
         }
         stage('Build') { 
                 
                 notifystarted()
-                // utils.mvn 'clean install'
                  mvn this, 'clean install'
-                // sh 'mvn clean install'
                 notifySuccessful()
                 
                 

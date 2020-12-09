@@ -1,5 +1,6 @@
 @Library('jenkins-shared-library@master') import static org.foo.Utilities.*
 import static org.foo.Gitcheckout.*
+import static org.foo.notifySuccessful.*
 node {
   stage('Git-Checkout') { 
         echo "checking out from git repo";
@@ -10,7 +11,7 @@ node {
                 
                 notifystarted()
                  mvn this, 'clean install'
-                notifySuccessful()
+                notify this, 'ak9031600@gmail.com'
                 
                 
         }

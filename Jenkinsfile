@@ -15,7 +15,7 @@ node {
                 }
         stage('email notification') {
                 //  notify this, 'ak9031600@gmail.com'
-                notify()
+                notify this, 'ak9031600@gmail.com'
         }
 
         // stage('deployment of an agent'){

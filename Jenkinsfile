@@ -14,7 +14,7 @@ node {
                
                 }
         stage('email notification') {
-                 notify.call("ak9031600@gmail.com")
+                 notify()
                
         }
 

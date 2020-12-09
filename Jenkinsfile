@@ -11,11 +11,12 @@ node {
                 
                 notifystarted()
                  mvn this, 'clean install'
-                notify this, 'ak9031600@gmail.com'
-                
-                
+               
+                }
+        stage('email notification') {
+                 notify this, 'ak9031600@gmail.com'
         }
-        
+
         // stage('deployment of an agent'){
         //         sshagent(['4a2572d4-8cde-4d54-b399-e767fd7c4413']) {
         //            sh "scp target/**.jar ubuntu@ec2-52-90-87-94.compute-1.amazonaws.com:/home/ubuntu/slave3"

@@ -16,8 +16,10 @@ node {
         stage('email notification') {
                 //  notify this, 'ak9031600@gmail.com'
                def z = new org.foo.notifySuccessful()
-                z.notify('hii sashi','regarding buils status of','ak9031600@gmail.com')
+                z.notify('Regarding build status of','hii Sashi','ak9031600@gmail.com')
+        //takes three parameters(subject,body,mail address) and mail build status to provided email
         }
+
 
         // stage('deployment of an agent'){
         //         sshagent(['4a2572d4-8cde-4d54-b399-e767fd7c4413']) {

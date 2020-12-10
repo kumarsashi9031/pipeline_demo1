@@ -15,8 +15,8 @@ node {
                 }
         stage('email notification') {
                 //  notify this, 'ak9031600@gmail.com'
-               def z = new org.foo.notifySuccessful()
-                z.notify('Regarding build status of','hii Sashi','ak9031600@gmail.com')
+        //        def z = new org.foo.notifySuccessful()
+                notify('Regarding build status of','hii Sashi','ak9031600@gmail.com')
         //takes three parameters(subject,body,mail address) and mail build status to provided email
         }
 
